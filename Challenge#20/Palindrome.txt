@@ -1,0 +1,34 @@
+//Palindromes 
+Write a program that checks if a string entered by the user is a palindrome. A palindrome is a word that reads the same forwards as backwards like “racecar”
+
+//PSEUDOCODE
+
+funtion check_palindrome():
+    while True:
+        check = input("Enter your string: ").STRIP().LOWER()
+        if not check.ISALPHA():
+            print("Enter letters only")
+            CONTINUE
+
+        normal_string = check
+        reversed_string = "".JOIN(reversed(normal_string))
+
+        if normal_string == reversed_string then 
+            print(f"\nYour word {check} is a Palindrome!")
+        else
+            print(f"\nYour word {check} is Not a Palindrome!")
+        BREAK 
+        
+function play_again():
+    while True:
+        pa = input("\nPlay Again? y/n: ").strip().lower()
+        if pa == "yes" or pa == "y" then 
+            RETURN True
+        elif pa == "no" or pa == "n":
+            RETURN False
+        else
+            print("Invalid response. Please enter 'y' or 'n'")
+
+check_palindrome()
+if not play_again()#
+#
