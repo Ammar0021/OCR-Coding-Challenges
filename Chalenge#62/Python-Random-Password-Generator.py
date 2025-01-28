@@ -5,7 +5,8 @@
 #PYTHON
 
 import random  
-import string
+import string  
+import os
 
 def pass_generator():
     UPPER = string.ascii_uppercase  
@@ -18,11 +19,16 @@ def pass_generator():
     password_length = int(input("How many characters do you want your password to be?: ").strip())
     password = "".join(random.choice(every_char) for i in range(password_length))
 
-    print("Your generated password is:", password)
-    with open("PasswordStorage.txt", "a") as file:  
+    print("Your generated password is:", password) 
+    folder_name = "Chalenge#62"  
+    
+    file_path = os.path.join(folder_name, "PasswordStorage.txt")
+    
+    # Opens the file in Append mode  
+    with open(file_path, "a") as file:  
         file.write(password + "\n")
     
-    print("Your password has been saved in 'PasswordStorage.txt'")
+    print(f"Your password has been saved in '{file_path}'")
     return password 
 
 while True:
